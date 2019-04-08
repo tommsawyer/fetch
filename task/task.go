@@ -44,9 +44,10 @@ type Task struct {
 	URL         string
 	RequestBody string
 
-	Err            error
-	ResponseStatus int
-	ResponseBody   string
+	Err                   error
+	ResponseStatus        int
+	ResponseBody          string
+	ResponseContentLength int64
 
 	done   chan struct{}
 	ctx    context.Context
@@ -97,6 +98,7 @@ func (t *Task) Run() {
 
 	t.ResponseStatus = rsp.StatusCode
 	t.ResponseBody = string(bs)
+	t.ResponseContentLength = int64(len(bs))
 }
 
 // Wait will wait until task finished.

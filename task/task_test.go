@@ -68,6 +68,7 @@ func (s *TaskSuite) TestTaskSetsRequestResult() {
 	s.Nil(s.testTask.Err)
 	s.Equal(s.testTask.ResponseStatus, http.StatusOK)
 	s.Equal(s.testTask.ResponseBody, "test")
+	s.Equal(s.testTask.ResponseContentLength, int64(4))
 }
 
 func (s *TaskSuite) TestTaskProperlySetStatuses() {

@@ -63,6 +63,7 @@ Response:
     "id":"a3175efe-6913-4d27-92e9-0b1fc096d035",
     "status":"finished",
     "response_status":200,
+    "response_content_length":123123,
     "response_body":"... google response body here"
 }
 ```
@@ -76,6 +77,7 @@ Response:
     "id":"a3175efe-6913-4d27-92e9-0b1fc096d035",
     "status":"finished",
     "response_status":200,
+    "response_content_length":123123,
     "response_body":"... google response body here"
 },{
     "id":"a31723fe-6913-4d27-92e9-0b1fc096d035",
