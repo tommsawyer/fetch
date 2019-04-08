@@ -1,0 +1,10 @@
+version: '3'
+services:
+  fetch:
+    build:
+      context: ./
+      dockerfile: Dockerfile
+    image: fetch:dev
+    container_name: fetch
+    ports:
+      - "9090:9090"
